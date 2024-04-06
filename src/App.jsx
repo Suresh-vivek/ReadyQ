@@ -1,8 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import GithubChat from "./Pages/GithubChat";
-
+// import InterviewChat from "./Pages/Interview";
+import GithubChat from './Pages/GithubChat.jsx'
 
 function App() {
   return (

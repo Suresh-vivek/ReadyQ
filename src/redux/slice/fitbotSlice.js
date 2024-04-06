@@ -11,23 +11,17 @@ const initialState = {
 }
 
 export const fitbotAction = createAsyncThunk('chat', async (
-    {message},
-    { }
+    {githubUsername,githubRepo,questionAnswer},
+    { rejectWithValue}
 ) => {
     try {
-        message = {
-            githubUserName:"theMitocondria",
-            githubRepo : "ReadyQ",
-        }
-        console.log(message);
-        const { data } = await axios.post("http://localhost:4000/interview/github", {
-            githubUsername:"theMitocondria",
-            githubRepo : "ReadyQ",
-        });
-
-
-
-        console.log(data);
+    
+        const { data } = await axios.post("http://localhost:4004/interview/github", {
+                githubUsername,
+                githubRepo,
+                questionAnswer
+            }
+        );
 
         return data;
     } catch (error) {
