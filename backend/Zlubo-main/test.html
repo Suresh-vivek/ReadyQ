@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Chatbot</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./IMAGES/23.jpg'); 
+    background-size:cover;
+  }
+  /*.chat-container {
+    max-width: 400px;
+    margin: 20% 20%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  } */
+.gif-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Place the GIF above the chat container */
+}
+
+.gif-container img {
+  max-width: 100%;
+  height: auto;
+}
+.chat-container {
+  right: 0;
+  width: 450px;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 70vh;
+  position: absolute;
+  top: 6vmax;
+  left: 35vmax;
+  padding-top: 50px;
+}
+.Integrations-container{
+  right: 0;
+  width: 300px;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 70vh;
+  position: absolute;
+  top: 6vmax;
+  left: 35vmax;
+  padding-top: 50px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+  .chat-messages {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 80%;
+  }
+  .user-message, .bot-message{
+    /* margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px; */
+    margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  }
+  .user-message {
+    background-color: #2266e2;
+    color: #ffffff;
+    align-self: flex-end;
+    text-align: right;
+
+  }
+  .bot-message {
+    background-color: #F5F5F5;
+    align-self: flex-start;
+    color:#020101;
+    text-align: left;
+  }
+  .dummy-message {
+    background-color: #F5F5F5;
+    align-self: flex-start;
+    color:#020101;
+    text-align: left;
+    margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  }
+  .input-container {
+  
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 0px 10px;
+  padding-top: 7px;
+  bottom: 0px;
+  border-bottom: 25px;
+  }
+  .footer{
+    display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 0px 10px;
+  padding-top: 7px;
+  bottom: 0px;
+  border-bottom: 25px;
+  }
+  #userInput {
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(143, 139, 139);
+    margin-left: 6px;
+    margin-right: 6px;
+    border: none !important;
+    background-color: #f5f5f5;
+    font-size: 20px;
+  }
+  #sendButton {
+    /* background-color: #2266e2;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none; */
+    background: transparent;
+    border: none;
+
+  }
+
+  #sendButton:hover{
+    background-color: white;
+    scale: 1.2;
+  }
+  .image-button {
+    width: 27px;
+  }
+
+  .header-bot{
+    font-size: 15px;
+    text-align: center;
+    background-color: #2266e2;
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    color: white;
+    font-weight: bolder;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .integration-box{
+    position:absolute;
+    top: 24vh;
+    right : 10vw;
+    height: 56vh;
+    width: 20vw;
+    background-color: white;
+    border-radius: 12px;
+    
+   
+  }
+  .header-integration{
+    background-color: #2266e2;
+    color: white;
+    height: 30px;
+    margin: 0px;
+    padding: 0;
+    text-align: center;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .body-integration{
+    height: 72%;
+
+  }
+  .footer{
+    height: auto;
+
+  }
+  .input-footer{
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  .image-button-integration{
+    height: 15px;
+    border-radius: 50%;
+  }
+  .sendButton-integration{
+    border-radius: 50%;
+    border: none;
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+  }
+  .input-integration{
+    border:none;
+    background-color: #F5F5F5;
+    margin-left: 10px;
+    width: 220px;
+    font-size: 25px;
+    border-radius: 10px;
+    height: 80%;  
+  }
+  .footer-integration{
+    display: flex;
+    flex-direction: row;
+  }
+  .button-footer{
+height: 80%;
+border:none;
+background-color: white ;
+  }
+  .footer-image{
+height: 25px;
+border-radius: 50%;
+  }
+  .button-footer:hover{
+  background-color: white; /* Green */
+  color: white;
+  scale: 1.2;
+  }
+  .image-zlubo{
+    height: 18px;
+    margin-right: 4px;
+  }
+  
+  
+ 
+</style>
+</head>
+<body>
+  
+<div class="chat-container">
+  
+  <div class="chat-messages" id="chatMessages">
+    <div class="header-bot">
+      <p class="header-text"> ZluBo </p>
+    </div>
+    <div class="bot-message">
+      <img src="./IMAGES/zluBo.png" class="image-zlubo"/>
+      Hello! How can I assist you today?
+    </div>
+  </div>
+  <hr>
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="">
+    <button id="sendButton" class="button-first">
+      <img class="image-button"
+      src="./IMAGES/Frame 427321257.svg"/>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div class="mainIntegration">
+  <div class="Integrations-container" >
+    <div class="integration-bot">
+      <p class="header-text"> DevGPT </p>
+    </div>
+  </div>
+  <hr>
+  <div class="integration">
+    <input type="text" id="userInput" placeholder="">
+    <button id="sendButton">
+      <img class="image-button"
+      src="/Users/harshjhunjhunwala/Desktop/finalui/zluri-Hackthon-2023/Frame 427321258.svg"/>
+    </button>
+  </div>
+</div> -->
+<div class="integration-box">
+    <h3 class="header-integration">
+      Current Integration
+    </h3>
+    <div class="body-integration">
+      <div class="dummy-message"> Slack Integration</div>
+      <div class="dummy-message"> GSuite Integration</div>
+      <div class="dummy-message"> Zoom Integration</div>
+      <div class="dummy-message"> Cloudfare Integration</div>
+
+    </div>
+    <hr >
+    <div class="footer-integration">
+      <input type="text" class="input-integration">
+      <button class="button-footer"><img class="footer-image" src="./IMAGES/Frame 427321258.svg"/></button>
+      
+
+    </div>
+</div>
+<script>
+  const chatMessages = document.getElementById('chatMessages');
+  const userInput = document.getElementById('userInput');
+  const sendButton = document.getElementById('sendButton');
+  sendButton.addEventListener('click', () => {
+    const userMessage = userInput.value.trim();
+    if (userMessage !== '') {
+      displayUserMessage(userMessage);
+      sendAndReceiveMessage(userMessage);
+      userInput.value = '';
+    }
+  });
+  function displayUserMessage(message) {
+    const userMessageDiv = document.createElement('div');
+    userMessageDiv.className = 'user-message';
+    userMessageDiv.textContent = message;
+    chatMessages.appendChild(userMessageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  function displayBotMessage(message) {
+    // const botMessageDiv = document.createElement('div');
+    // botMessageDiv.className = 'bot-message';
+    // botMessageDiv.textContent = message;
+    // chatMessages.appendChild(botMessageDiv);
+    // chatMessages.scrollTop = chatMessages.scrollHeight;
+    const botMessageDiv = document.createElement('div');
+botMessageDiv.className = 'bot-message';
+const image = document.createElement('img');
+image.src = './IMAGES/zluBo.png';
+image.className='image-zlubo';
+botMessageDiv.appendChild(image);
+const message1 = document.createElement('span');
+message1.innerText=message;
+
+botMessageDiv.appendChild(message1);
+
+// Create the image element
+
+
+chatMessages.appendChild(botMessageDiv);
+// Add the image to the div
+
+
+// Append the div to the chat messages container
+
+chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  }
+  async function sendAndReceiveMessage(message) {
+    // Simulate sending message to your API and receiving a response
+    const apiUrl = "http://127.0.0.1:5000/chatbot";
+    const reqOptions = {
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({ message :message}),
+    } ;
+
+    try {
+      console.log("MESSAGE IS: " + message);
+      const response = await fetch(apiUrl,reqOptions);
+      console.log("RESPONSE IS: " + response);
+      const data = await response.json();
+      displayBotMessage(data.response);
+    }catch(err){
+      console.log(err);
+      displayBotMessage("An Error Occured");
+    }
+    setTimeout(() => {
+      displayBotMessage(response);
+    }, 1000);
+  }
+</script>
+</body>
+</html>

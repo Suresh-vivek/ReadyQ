@@ -1,0 +1,180 @@
+/* Define background for the whole chat interface */
+.fit-bot-body {
+  background: #03010c;
+  background-size: cover;
+  background-position: center center;
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+/* Style the chat box */
+.chat-box {
+  width: 800px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 70vh;
+  position: absolute;
+  top: 10vmax;
+  left: 10vmax;
+}
+
+/* Style the chat box header */
+.chat-box-header {
+  background-color: white;
+  color: #06002e;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Style the chat box body */
+.chat-box-body {
+  padding: 10px;
+  overflow-y: auto;
+  height: calc(100% - 145px);
+}
+
+/* Style the chat messages */
+.message-card {
+  background-color: gainsboro;
+  max-width: 75%;
+  padding: 1vmax;
+  margin: 1vmax;
+  border-radius: 0.5vmax;
+  display: inline-block;
+  clear: both;
+}
+
+/* Style the user's messages */
+.message-card-right {
+  float: right;
+  background-color: #f3f3f3;
+  color: #000;
+}
+
+/* Style the chatbot's responses */
+.message-card-left {
+  float: left;
+  background-color: #b4a8f3;
+  color: #000;
+}
+
+/* Style the chat box footer */
+.chat-box-footer {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  margin-bottom: 0;
+}
+
+/* Style the input field */
+.chat-box-footer input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style the button */
+.chat-box-footer button {
+  margin-left: 8px;
+  padding: 8px 16px;
+  background-color: #06002ee3;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Add some hover effects to the button */
+.chat-box-footer button:hover {
+  background-color: #0073e6;
+}
+
+.chat-box-footer button:active {
+  background-color: #005bbf;
+}
+.dropdown{
+  width: 10%;
+  height: 45px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white; /* Set text color to white */
+  background-image: linear-gradient(
+    to right,
+    #c257f5,
+    #ad00ff
+  ); /* Apply gradient to background */
+  border: none;
+  cursor: pointer;
+}
+
+.fitbot-rightt{
+  /* background-color: red; */
+  height: 70vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.fitbot-righttt{
+  /* background-color: red; */
+  height: 30vh;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.sendbuttonin{
+  /* background-color: red; */
+  width: 550px;
+  padding: 2px;
+  height: 52px;
+  box-shadow: #e6e6e6;
+}
+
+
+
+
+.fitbot-right-headd{
+  font-size: 50px;
+}
+.input-tag-int{
+  height: 45px;
+  width: 260px;
+  padding: 2px;
+  margin-right: 12px;
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+.fitbot-rightt{
+  
+  height: 50%;
+  width: 32%;
+  display: inline;
+  padding: 1%;
+  
+}
+.right-desc-2{
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.fitbot-hashtag{
+  font-size: 32px;
+  z-index: 120;
+}

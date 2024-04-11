@@ -1,0 +1,300 @@
+.fit-bot-body{
+    background:#03010c;
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+
+  }
+  
+  
+  .logo-container
+  {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .fitbot-image{
+    width: 45vw;
+  }
+  .codingnexus a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #loading {
+    font-size: 50px;
+  }
+  
+  /* Style the chat box */
+  .chat-box {
+    /* margin-left: -100px; */
+    right: 0;
+    width: 500px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+    position: absolute;
+    top: 10vmax;
+    left: 30vmax;
+  }
+  
+  .codingnexus {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Style the chat box header */
+  .chat-box-header {
+    background-color: rgb(188, 11, 11);
+    color:#270adf;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  
+  
+  }
+  .code-class{
+    color : black
+  }
+  /* Style the chat box body */
+  .chat-box-body {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 145px);
+  
+  }
+  
+  /* Style the chat messages */
+  .chat-box-body .message,
+  .chat-box-body .response {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  /* Style the user's messages */
+  .chat-box-body .message {
+    background-color: #e6e6e6;
+    color: #333333;
+  }
+  
+  /* Style the chatbot's responses */
+  .chat-box-body .response {
+    background-color:   #cfcfcf;
+    color: #9d8cff;
+    text-align: right;
+  }
+  
+  /* Style the chat box footer */
+  .chat-box-footer {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    margin-bottom: 0;
+  }
+  
+  /* Style the input field */
+  .chat-box-footer input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Style the button */
+  .chat-box-footer button {
+    margin-left: 8px;
+    padding: 8px 16px;
+    background-color: #06002ee3;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Add some hover effects to the button */
+  .chat-box-footer button:hover {
+    background-color: #0073e6;
+  }
+  
+  .chat-box-footer button:active {
+    background-color: #005bbf;
+  }
+  
+  .fitbot-right{
+    position: absolute;
+    top: 15vh;
+    right: 8vw;
+    width: 25vw;
+
+    
+  }
+  
+  .fitbot-right-head{
+    color: white;
+    margin-top: 3vw;
+    font-size: 3vmax;
+  }
+  
+  .fitbot-right-desc{
+    color: rgb(184, 183, 183);
+    margin: 0;
+    font-size: 2.6vh;
+  }
+  
+  .fitbot-hashtag{
+    margin-top: 3vmax;
+    background: linear-gradient(109.14deg, #4336DB 8.23%, rgba(196, 156, 228, 0.89) 73.05%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
+    font-size: 2vmax;
+  }
+  
+  
+  @media screen and (max-width:600px) {
+  .fitbot-image{
+    display: none;
+  }
+  
+  .fitbot-right-head{
+    display: none;
+    
+  }
+ 
+  
+  
+  
+  .fitbot-hashtag{
+    position: relative;
+    left: 0;
+  }
+  
+  .chat-box{
+    position: relative;
+    top: 10px;
+  
+    left: 0px;
+    width: 90vw;
+    margin: auto;
+    height: 70vh;
+  
+  
+  }
+  }
+
+  .message-card{
+    background-color: gainsboro;
+    /* width: 70%; */
+    max-width: 75%;
+    padding:1vmax;
+    margin: 1vmax;
+    border-radius: 0.5vmax;
+    display: inline-block;
+    clear:both;
+}
+
+.message-card-right{
+    float: right;
+    background-color: #f3f3f3;
+    color: rgb(0, 0, 0);
+}
+
+
+.message-card-left{
+    float: left;
+    background-color: #b4a8f3;
+    color: rgb(0, 0, 0);
+}
+
+.csleft{
+  display: flex;
+  width: 60%;
+  margin-left: 50px;
+
+}
+.csright{
+  display:flex;
+  width: 40%;
+  flex-direction: column;
+  gap: 30px;
+  /* margin-right: 100px; */
+  align-items: left;
+
+ 
+
+}
+
+.container2{
+  width: 35%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+.csdrop{
+  width: auto;
+  height: 40px;
+  font-size:16px;
+  margin: 10px;
+  padding: 10px;
+
+}
+.csdrop1{
+  width: 330px;
+  height: 40px;
+  font-size:16px;
+  margin: 10px;
+  padding: 10px;
+}
+.csoptions{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: -50px;
+}
+
+.code-submit{
+  width : 27.2vw;
+  
+  height: 40px;
+  margin-left: -40px;
+  /* font-weight: bold; */
+  font-size: 24px;
+
+}
+
+
+.sendbuttonin{
+  width: 20.4vw;
+  margin-top: 20px;
+  height: 34px;
+  font-size: 24px;
+}
+
+.dumyfooter{
+  height: 60px;
+  background-color: #000000;
+}

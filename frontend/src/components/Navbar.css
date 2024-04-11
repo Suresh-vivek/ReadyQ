@@ -1,0 +1,66 @@
+* {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 5vh;
+  position: fixed;
+  width: 100%;
+
+  background-color: #000000;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin-right: 300px;
+  gap: 0.5rem;
+  align-items: center;
+}
+.name {
+  color: white;
+  font-size: 2rem;
+}
+.q {
+  /* Your existing styles */
+  color: #bb29f7;
+  font-weight: 800;
+
+  /* Gradient */
+  background-image: linear-gradient(to right, #c257f5, #ad00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: larger;
+  margin-right: 60px;
+}
+.nav-items li {
+  list-style: none;
+}
+
+.nav-items li .active {
+  color: #ad00ff;
+}
+
+.nav-items li a {
+  color: white; /* Set default color for non-selected items */
+}
+
+.nav-items li .pending {
+  color: gray; /* Assuming gray color for pending items */
+}

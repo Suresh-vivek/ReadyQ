@@ -1,0 +1,151 @@
+.kitabi-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+  height: 100vh;
+}
+.info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 1rem;
+  width: 45vw;
+}
+.ranking1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 55vw;
+}
+.kdesc {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-left: 60px;
+  color: #e96c05;
+
+  /* Gradient */
+  background-image: linear-gradient(to right, #f7c51f, #e96c05);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kurl {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-left: 60px;
+  color: #e96c05;
+
+  /* Gradient */
+  background-image: linear-gradient(to right, #f7c51f, #e96c05);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kinput {
+  width: 40%;
+  border-radius: 2px;
+  margin-left: 60px;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  padding: 5px;
+}
+.kurl1 {
+  display: flex;
+  gap: 20x;
+  flex-direction: row;
+}
+.kbtn {
+  width: 200px;
+  height: 55px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white; /* Set text color to white */
+  background-image: linear-gradient(
+    to right,
+    #c257f5,
+    #ad00ff
+  ); /* Apply gradient to background */
+  border: none;
+  cursor: pointer;
+}
+.chat-container{ overflow: hidden;
+  height: 70vh;
+  width: 70%;
+  position: relative;
+  border: 1px solid #bb29f7;
+  border-radius: 25px;
+
+}
+.ranking1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 50vw;
+}
+.chat-window {
+  height: 60vh;
+  overflow-y: auto;
+ 
+  padding: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+  
+}
+
+.user {
+  color: white; /* Set text color to white */
+  background-image: linear-gradient(
+    to right,
+    #c257f5,
+    #ad00ff
+  ); /* Apply gradient to background */
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  margin-left:100px ;
+
+}
+
+.bot {
+  background-color: white;
+  text-align: left;
+  margin-right: 100px;
+}
+
+.message-input {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.message-input input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-input button:hover {
+  background-color: #0056b3;
+}
